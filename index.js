@@ -1,9 +1,7 @@
-// import express from "express";
-// import process from "process";
-// const { getAllSongs } = require("./method");
-// import { getAllSongs } from "./method.js";
-// import { getAllSongs } from './methods.js';
-const express = require("express");
+import express from "express";
+import process from "process";
+import { getAllSongs } from "./methods.js";
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -12,6 +10,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.status(200).send(`Welcome to the Simple Express Server for Music Lovers
     \n
+    ${getAllSongs()}
     `);
 });
 

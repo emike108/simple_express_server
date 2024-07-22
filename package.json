@@ -1,6 +1,7 @@
 {
   "name": "simple_express_server",
   "version": "1.0.0",
+  "type": "module",
   "description": "A simple express server that manipulates a stateful object",
   "main": "index.js",
   "scripts": {
@@ -12,7 +13,8 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-import": "^2.29.1",
     "nodemon": "^3.1.4"
   }
 }
