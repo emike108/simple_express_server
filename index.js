@@ -8,10 +8,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200).send(`Welcome to the Simple Express Server for Music Lovers
-    \n
-    ${getAllSongs()}
-    `);
+  res.status(200).send({ allSongs: getAllSongs() });
 });
 
 // app.post("/song", (req, res) => {
