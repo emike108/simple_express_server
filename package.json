@@ -1,0 +1,17 @@
+{
+  "name": "simple_express_server",
+  "version": "1.0.0",
+  "description": "A simple express server that manipulates a stateful object",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Mike Ortiz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
