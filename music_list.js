@@ -6,6 +6,7 @@ export const fullMusicList = [
     album: "Crushing",
     genre: "Indy Folk",
     duration: "TBD",
+    enteredBy: "Mike",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const fullMusicList = [
     album: "Unknown",
     genre: "Indy Psych Rock",
     duration: "TBD",
+    enteredBy: "Mike",
   },
   {
     id: 3,
@@ -22,5 +24,6 @@ export const fullMusicList = [
     album: "Your's Conditionally",
     genre: "Indy Pop",
     duration: "TBD",
+    enteredBy: "Mike",
   },
 ];
