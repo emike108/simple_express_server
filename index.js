@@ -2,6 +2,7 @@ import express from "express";
 import process from "process";
 import { getAllSongs } from "./methods.js";
 import { fullMusicList } from "./music_list.js";
+import { requiredFields } from "./routeUtils.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -13,17 +14,10 @@ app.get("/", (_req, res) => {
 });
 
 app.post("/song", (req, res) => {
-  //refactor check for required fields to be more efficient
-  if (!req.body.title) {
-    return res.status(400).json({ message: "Song title is required" });
-  }
-  if (!req.body.artist) {
-    return res.status(400).json({ message: "Artist name is required" });
-  }
-  if (!req.body.enteredBy) {
-    return res
-      .status(400)
-      .json({ message: "Name of person making the entry is required" });
+  for (const { field, message } of requiredFields) {
+    if (!req.body[field]) {
+      return res.status(400).send({ message });
+    }
   }
 
   const newSong = {
