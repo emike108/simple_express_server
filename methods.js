@@ -1,5 +1,7 @@
-import { fullMusicList } from "./music_list.js";
+const { fullMusicList } = require("./music_list");
 
-export function getAllSongs() {
+function getAllSongs() {
   return fullMusicList;
 }
+
+module.exports = { getAllSongs };

@@ -1,4 +1,4 @@
-export const fullMusicList = [
+const fullMusicList = [
   {
     id: 1,
     title: "Don't know how to keep loving you",
@@ -27,3 +27,5 @@ export const fullMusicList = [
     enteredBy: "Mike",
   },
 ];
+
+module.exports = { fullMusicList };
