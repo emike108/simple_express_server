@@ -21,7 +21,7 @@ app.post("/song", (req, res) => {
 
   const newSong = {
     id: currentMusicList.length + 1,
-    name: req.body.name,
+    title: req.body.title,
     artist: req.body.artist,
     album: req.body.album,
     genre: req.body.genre,
@@ -38,3 +38,5 @@ app.post("/song", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
+module.exports = { app };
